@@ -30,6 +30,8 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
 
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
@@ -57,6 +59,11 @@
 			<!-- Load when clicks contact -->
 			<c:if test="${userClickContact==true}">
 				<%@include file="contact.jsp"%>
+			</c:if>
+			
+			<!-- Load when clicks all products -->
+			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 
 		</div>
